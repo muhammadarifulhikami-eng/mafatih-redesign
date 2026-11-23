@@ -248,6 +248,25 @@ code { background: rgba(109, 40, 217, 0.1); padding: 1px 5px; border-radius: 4px
 
 /* Modal */
 .modal-backdrop { position: fixed; inset: 0; background: rgba(26, 11, 56, 0.78); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 100; }
+
+/* Subpage Banner & Content */
+.page-hero {
+  background: linear-gradient(125deg, var(--purple-deep) 0%, var(--purple-royal) 100%);
+  color: #ffffff;
+  padding: 52px 0 44px;
+}
+.page-hero h1 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(34px, 4.4vw, 50px); margin: 0 0 8px; line-height: 1.1; }
+.page-hero p { margin: 0; color: #ede9fe; font-size: 15px; max-width: 720px; }
+.page-section { padding: 60px 0; }
+.page-section.alt { background: var(--lavender-soft); }
+.content-card { background: #ffffff; border: 1px solid var(--border-soft); border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+.content-card h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 28px; color: var(--purple-deep); margin: 0 0 12px; }
+.content-card h3 { font-size: 17px; color: var(--purple-royal); margin: 18px 0 8px; }
+.content-card p, .content-card li { font-size: 14px; color: var(--text-muted); }
+.content-card ul, .content-card ol { padding-left: 20px; display: grid; gap: 6px; margin: 8px 0 14px; }
+.founder-card { display: grid; grid-template-columns: 90px 1fr; gap: 16px; align-items: center; background: var(--lavender-soft); border: 1px solid var(--border-soft); border-radius: 14px; padding: 16px; }
+.founder-card img { width: 90px; height: 90px; object-fit: cover; border-radius: 12px; }
+.alert-warn { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 12px; padding: 14px 18px; font-size: 13.5px; color: #78350f; margin: 14px 0; }
 .modal-backdrop.open { display: flex; }
 .modal-card { position: relative; width: 100%; max-width: 480px; background: #ffffff; border-radius: 16px; padding: 28px; }
 .modal-close { position: absolute; top: 12px; right: 14px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border-soft); background: var(--lavender-soft); font-size: 18px; }
