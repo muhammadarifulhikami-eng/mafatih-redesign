@@ -21,11 +21,11 @@ function openPpdbModal() {
         <option value="Secondary Level (Online School)">Secondary Level (Online School)</option>
       </select>
       <select id="pTier">
-        <option value="Regular">Jalur Regular</option>
-        <option value="Subsidized (Financial Aid)">Jalur Subsidized (Financial Aid)</option>
-        <option value="Donor">Jalur Donor</option>
+        <option value="Reguler">Jalur Reguler</option>
+        <option value="Subsidi (Financial Aid)">Jalur Subsidi (Financial Aid)</option>
+        <option value="Donatur">Jalur Donatur</option>
       </select>
-      <button type="submit" class="btn-purple-nav" style="width:100%;">Kirim via WhatsApp Resmi MISJ →</button>
+      <button type="submit" class="btn-purple-sm" style="width:100%;padding:12px;">Kirim via WhatsApp Resmi MISJ →</button>
     </form>
   `;
   document.getElementById("ppdbForm")?.addEventListener("submit", (e) => {
@@ -33,7 +33,7 @@ function openPpdbModal() {
     const name = document.getElementById("pName").value.trim();
     const level = document.getElementById("pLevel").value;
     const tier = document.getElementById("pTier").value;
-    const msg = `Assalamu'alaikum Admin Mafatih Islamic School,%0A%0ASaya ingin informasi PPDB 2027/2028:%0ANama Siswa: ${encodeURIComponent(name)}%0AJenjang: ${encodeURIComponent(level)}%0ASkema: ${encodeURIComponent(tier)}`;
+    const msg = `Assalamu'alaikum Admin Mafatih Islamic School,%0A%0ASaya ingin informasi PPDB 2027/2028:%0ANama Siswa: ${encodeURIComponent(name)}%0AJenjang: ${encodeURIComponent(level)}%0AJalur: ${encodeURIComponent(tier)}`;
     window.open(`https://wa.me/${MISJ_WA}?text=${msg}`, "_blank", "noopener");
   });
   modal.classList.add("open");
@@ -45,41 +45,42 @@ function closeModal() {
   modal.setAttribute("aria-hidden", "true");
 }
 
-["openPpdbNav", "openPpdbHero"].forEach((id) => {
+["openPpdbHero", "openPpdbReg"].forEach((id) => {
   document.getElementById(id)?.addEventListener("click", openPpdbModal);
 });
 
-document.querySelectorAll(".prog-card").forEach((card) => {
-  card.addEventListener("click", openPpdbModal);
+document.getElementById("openAcadYearLink")?.addEventListener("click", (e) => {
+  e.preventDefault();
+  modalKicker.textContent = "ACADEMIC YEAR · 2026/2027 & 2027/2028";
+  modalTitle.textContent = "Kalender Akademik & PPDB MISJ";
+  modalBody.innerHTML = `<p style="font-size:14px;color:#524c70;">Tahun Ajaran berjalan 2026/2027 (PTS Ganjil 21–25 September 2026, Fun Tahsin Camp 16–17 Oktober 2026). Pendaftaran PPDB Tahun Ajaran <strong>2027/2028</strong> telah dibuka untuk Elementary &amp; Secondary Level.</p>`;
+  modal.classList.add("open");
 });
 
-const newsContent = {
-  tahsin: {
-    kicker: "BERITA MISJ · 16–17 OKTOBER 2026",
-    title: "Keseruan Fun Tahsin Camp di Mafatih Islamic School Jakarta",
-    body: "Mafatih Islamic School Jakarta (MISJ) menyelenggarakan Fun Tahsin Camp untuk membiasakan siswa mencintai, membaca, dan memperbaiki tahsin Al-Qur'an dalam suasana yang hangat dan menyenangkan."
-  },
-  brin: {
-    kicker: "KEGIATAN SAINS",
-    title: "Pengalaman Study Tour Edukatif ke Animalium BRIN",
-    body: "Belajar sains terasa jauh lebih hidup ketika siswa dapat mengamati langsung keanekaragaman fauna dan berdiskusi bersama para peneliti di Animalium BRIN."
-  },
-  mading: {
-    kicker: "KARYA SISWA & AKADEMIK",
-    title: "Mading Pekan Ini & Pelaksanaan PTS Semester Ganjil",
-    body: "Karya tulis, ilustrasi, dan kreativitas siswa ditampilkan setiap pekan pada Mading Sekolah sebagai bagian dari budaya literasi Mafatih Islamic School Kalibata."
-  }
-};
+document.getElementById("orderBookBtn")?.addEventListener("click", () => {
+  window.open(
+    `https://wa.me/${MISJ_WA}?text=${encodeURIComponent("Assalamu'alaikum Admin Mafatih Islamic School, saya ingin memesan Buku Terbitan Mafatih.")}`,
+    "_blank",
+    "noopener"
+  );
+});
 
-document.querySelectorAll(".news-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    const n = newsContent[card.getAttribute("data-news")];
-    if (!n) return;
-    modalKicker.textContent = n.kicker;
-    modalTitle.textContent = n.title;
-    modalBody.innerHTML = `<p style="font-size:14px;color:#524c70;">${n.body}</p>`;
-    modal.classList.add("open");
+function filterBooks(cat) {
+  document.querySelectorAll(".book-tab").forEach((t) => {
+    t.classList.toggle("active", t.getAttribute("data-book") === cat);
   });
+  document.querySelectorAll(".book-card").forEach((card) => {
+    const c = card.getAttribute("data-book-cat");
+    card.classList.toggle("hidden", cat !== "all" && c !== cat);
+  });
+}
+
+document.querySelectorAll(".book-tab").forEach((tab) => {
+  tab.addEventListener("click", () => filterBooks(tab.getAttribute("data-book")));
+});
+
+document.querySelectorAll("[data-book-tab]").forEach((link) => {
+  link.addEventListener("click", () => filterBooks(link.getAttribute("data-book-tab")));
 });
 
 document.getElementById("modalClose")?.addEventListener("click", closeModal);
