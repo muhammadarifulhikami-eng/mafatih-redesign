@@ -9,7 +9,10 @@ function openPpdbModal() {
   modalKicker.textContent = "PPDB 2027/2028 · MAFATIH ISLAMIC SCHOOL";
   modalTitle.textContent = "Formulir Pendaftaran & Konsultasi";
   modalBody.innerHTML = `
-    <p style="font-size:13.5px;color:#524c70;margin:0 0 12px;">Tersedia 3 skema pendaftaran: Regular, Subsidized (Financial Aid), dan Donor.</p>
+    <p style="font-size:13px;color:#524c70;margin:0 0 12px;">
+      Tersedia 3 jalur pendaftaran: <strong>Reguler, Subsidi, dan Donatur</strong>.<br />
+      Biaya pendaftaran &amp; asesmen psikolog: <strong>Rp450.000</strong> (BSI 5773012280 a.n. Generasi Aman Sentosa). DP Uang Pangkal Rp4.000.000 (Reguler) / Rp2.000.000 (Subsidi), dikembalikan 100% jika tidak diterima.
+    </p>
     <form class="ppdb-form" id="ppdbForm">
       <input type="text" id="pName" placeholder="Nama Lengkap Calon Siswa" required />
       <select id="pLevel">

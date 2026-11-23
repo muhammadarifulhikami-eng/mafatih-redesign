@@ -56,7 +56,16 @@ button { font-family: inherit; cursor: pointer; }
 
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 16px; }
 .misj-brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.misj-emblem { width: 42px; height: 42px; }
+.misj-logo-img { height: 46px; width: auto; object-fit: contain; display: block; }
+.footer-logo-badge {
+  background: #ffffff;
+  padding: 5px 8px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo-badge .misj-logo-img { height: 42px; }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-text strong { font-size: 16px; font-weight: 800; letter-spacing: 0.08em; color: var(--purple-royal); }
