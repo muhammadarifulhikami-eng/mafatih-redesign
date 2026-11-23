@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mafatih Islamic School — International Standard Redesign Concept | HIKAMI-DEV</title>
+  <meta
+    name="description"
+    content="Mafatih Islamic School Jakarta (MISJ) — School of Tahfizh, Science and Leadership. Terakreditasi A. Konsep redesign website sekolah berstandar internasional oleh HIKAMI-DEV."
+  />
+  <link rel="icon" type="image/png" href="assets/favicon-h.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- International Top Strip -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>🎓 <strong>PPDB 2027/2028 Dibuka:</strong> Elementary (Full-Day &amp; Online) &amp; Secondary (Online School)</span>
+      <span class="top-bar-right">Redesign Concept by <a href="https://dev.hikami.my.id" target="_blank" rel="noopener noreferrer">HIKAMI-DEV | ひかみ</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="misj-header" id="misjHeader">
+    <div class="container header-inner">
+      <a href="#top" class="misj-brand" aria-label="Mafatih Islamic School">
+        <svg class="misj-emblem" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <path d="M22 3L38 9.5V21C38 30.6 31.1 38.2 22 40.5C12.9 38.2 6 30.6 6 21V9.5L22 3Z" fill="#4C1D95" stroke="#F59E0B" stroke-width="2" />
+          <path d="M22 10L24.2 15.2L29.8 15.6L25.5 19.2L26.8 24.7L22 21.8L17.2 24.7L18.5 19.2L14.2 15.6L19.8 15.2L22 10Z" fill="#FBBF24" />
+          <path d="M14 28.5C17 27.3 19.5 27.7 22 29.2C24.5 27.7 27 27.3 30 28.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+        <div class="brand-text">
+          <strong>MAFATIH</strong>
+          <span>ISLAMIC SCHOOL · JAKARTA</span>
+        </div>
+      </a>
+
+      <nav class="misj-nav" aria-label="Navigasi Utama">
+        <a href="#top" class="nav-link active" data-i18n="nav.home">Beranda</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">Tentang</a>
+        <a href="#programs" class="nav-link" data-i18n="nav.programs">Program</a>
+        <a href="#parents" class="nav-link" data-i18n="nav.parents">Portal Ortu</a>
+        <a href="#news" class="nav-link" data-i18n="nav.news">Berita &amp; Karya</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="lang-btn" id="langBtn">ID</button>
+        <button type="button" class="btn-purple-nav" id="openPpdbNav" data-i18n="nav.register">Daftar PPDB →</button>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#top">Beranda</a>
+      <a href="#about">Tentang &amp; Akreditasi</a>
+      <a href="#programs">Program Pendidikan</a>
+      <a href="#parents">Portal Orang Tua</a>
+      <a href="#news">Berita &amp; Karya Siswa</a>
+      <a href="#contact">Kontak Kalibata</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="assets/hero-school.jpg" alt="Lingkungan Belajar Mafatih Islamic School" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span>★ AKREDITASI A NASIONAL (2022)</span>
+          <span>SCHOOL OF TAHFIZH, SCIENCE &amp; LEADERSHIP</span>
+        </div>
+
+        <h1 data-i18n-html="hero.title">
+          Shaping Future Leaders<br />
+          with <span class="gold-serif">Islamic Values.</span>
+        </h1>
+
+        <p class="hero-desc" data-i18n="hero.desc">
+          Mafatih Islamic School Jakarta (MISJ) memadukan pendidikan Tahfizh Al-Qur'an, sains modern, literasi bahasa Inggris, dan pembentukan karakter kepemimpinan Islami berstandar internasional.
+        </p>
+
+        <div class="hero-cta">
+          <button type="button" class="btn-gold" id="openPpdbHero" data-i18n="hero.btn1">Daftar PPDB 2027/2028 →</button>
+          <a href="#parents" class="btn-outline-light" data-i18n="hero.btn2">Portal Orang Tua &amp; Booklet</a>
+        </div>
+
+        <div class="hero-pillars">
+          <div class="hp-item"><span>📖</span><div><strong>Tahfizh &amp; Tahsin</strong><small>Pembinaan Qur'ani terstruktur</small></div></div>
+          <div class="hp-item"><span>🔬</span><div><strong>Science &amp; Bilingual</strong><small>Kurikulum adaptif &amp; English</small></div></div>
+          <div class="hp-item"><span>🧭</span><div><strong>Leadership</strong><small>Karakter mandiri &amp; berakhlak</small></div></div>
+          <div class="hp-item"><span>🤝</span><div><strong>3 Jalur Biaya</strong><small>Reguler, Subsidi &amp; Donatur</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & ACCREDITATION -->
+    <section class="section-about" id="about">
+      <div class="container about-grid">
+        <div>
+          <span class="kicker" data-i18n="about.kicker">TENTANG MAFATIH ISLAMIC SCHOOL</span>
+          <h2 class="serif-title" data-i18n="about.title">Pendidikan Islami Modern di Jantung Jakarta Selatan</h2>
+          <p class="about-text" data-i18n="about.desc">
+            Berlokasi di Kalibata, Jakarta Selatan, Mafatih Islamic School (MISJ) berkomitmen melahirkan generasi Qur'ani yang unggul secara akademik, cakap berbahasa, serta memiliki kepedulian sosial melalui skema pendidikan inklusif (Reguler, Subsidi, dan Donatur).
+          </p>
+          <div class="accred-box">
+            <div class="accred-grade">A</div>
+            <div>
+              <strong>Terakreditasi A Nasional (BAN-S/M 2022)</strong>
+              <p>Pengakuan resmi atas mutu kurikulum, tenaga pendidik, sarana prasarana, dan tata kelola sekolah.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="programs-preview" id="programs">
+          <article class="prog-card" data-prog="elementary">
+            <img src="assets/prog-elem.jpg" alt="Elementary Level Mafatih" />
+            <div class="prog-body">
+              <span class="prog-pill">ELEMENTARY LEVEL</span>
+              <h3>Sekolah Dasar (SD) — Full-Day &amp; Online</h3>
+              <p>Fondasi Tahfizh, adab Islami, literasi sains, matematika, dan bahasa Inggris aktif untuk siswa kelas 1–6.</p>
+              <button type="button" class="link-purple">Detail Program &amp; Booklet →</button>
+            </div>
+          </article>
+
+          <article class="prog-card" data-prog="secondary">
+            <img src="assets/prog-sec.jpg" alt="Secondary Level Mafatih" />
+            <div class="prog-body">
+              <span class="prog-pill">SECONDARY LEVEL</span>
+              <h3>Sekolah Menengah — Online School</h3>
+              <p>Program pembelajaran fleksibel berstandar terstruktur dengan pendampingan guru, riset sains, dan penguatan karakter.</p>
+              <button type="button" class="link-purple">Detail Program &amp; Booklet →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR PARENTS & DIGITAL PORTAL -->
+    <section class="section-parents" id="parents">
+      <div class="container">
+        <div class="head-center">
+          <span class="kicker" data-i18n="par.kicker">INFORMATION FOR PARENTS</span>
+          <h2 class="serif-title" data-i18n="par.title">Pusat Layanan Orang Tua &amp; Ekosistem Digital</h2>
+          <p data-i18n="par.desc">Akses cepat seluruh panduan akademik, pembayaran Virtual Account, pengajuan subsidi, hingga e-learning sekolah.</p>
+        </div>
+
+        <div class="parents-grid">
+          <a href="#contact" class="parent-tile">
+            <span class="tile-icon">📘</span>
+            <h3>Parents Handbook</h3>
+            <p>Buku panduan resmi tata tertib, kalender akademik, dan komunikasi orang tua.</p>
+          </a>
+          <a href="#contact" class="parent-tile">
+            <span class="tile-icon">💳</span>
+            <h3>Virtual Account Guide</h3>
+            <p>Panduan tertulis &amp; tutorial video pembayaran SPP melalui Virtual Account.</p>
+          </a>
+          <a href="#contact" class="parent-tile">
+            <span class="tile-icon">🤝</span>
+            <h3>Financial Aid (Subsidi)</h3>
+            <p>Skema pendaftaran jalur Regular, Subsidized, dan Donor untuk pendidikan inklusif.</p>
+          </a>
+          <a href="#contact" class="parent-tile">
+            <span class="tile-icon">💻</span>
+            <h3>E-Learning &amp; Library</h3>
+            <p>Portal materi belajar digital, buku impor &amp; buku Mafatih, serta perpustakaan sekolah.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST NEWS & KARYA SISWA -->
+    <section class="section-news" id="news">
+      <div class="container">
+        <div class="head-split">
+          <div>
+            <span class="kicker">BERITA &amp; KARYA SISWA</span>
+            <h2 class="serif-title">Aktivitas &amp; Prestasi MISJ</h2>
+          </div>
+          <a href="https://mafatihislamicschool.sch.id/" target="_blank" rel="noopener noreferrer" class="link-purple">Lihat Arsip Resmi ↗</a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card" data-news="tahsin">
+            <img src="assets/news-tahsin.jpg" alt="Fun Tahsin Camp Mafatih" />
+            <div class="news-body">
+              <span class="news-date">16–17 OKTOBER 2026</span>
+              <h3>Keseruan Fun Tahsin Camp di Mafatih Islamic School Jakarta</h3>
+              <p>Program pembinaan membaca Al-Qur'an yang interaktif dan menyenangkan untuk memperkuat kecintaan siswa pada Al-Qur'an.</p>
+              <button type="button" class="link-purple">Baca Selengkapnya →</button>
+            </div>
+          </article>
+
+          <article class="news-card" data-news="brin">
+            <img src="assets/news-science.jpg" alt="Study Tour ke Animalium BRIN" />
+            <div class="news-body">
+              <span class="news-date">SAINS &amp; EKSPERIMEN</span>
+              <h3>Pengalaman Study Tour Edukatif ke Animalium BRIN</h3>
+              <p>Siswa belajar ilmu hayati dan keanekaragaman fauna secara langsung bersama peneliti dan pendidik di laboratorium alam.</p>
+              <button type="button" class="link-purple">Baca Selengkapnya →</button>
+            </div>
+          </article>
+
+          <article class="news-card" data-news="mading">
+            <img src="assets/prog-elem.jpg" alt="Mading Karya Siswa Mafatih" />
+            <div class="news-body">
+              <span class="news-date">KARYA KAMI &amp; AKADEMIK</span>
+              <h3>Mading Pekan Ini &amp; Pelaksanaan PTS Semester Ganjil 2026/2027</h3>
+              <p>Menampilkan kreativitas literasi siswa dalam Mading mingguan serta evaluasi capaian belajar semester ganjil.</p>
+              <button type="button" class="link-purple">Baca Selengkapnya →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-testi">
+      <div class="container">
+        <div class="head-center">
+          <span class="kicker gold">TESTIMONIALS FROM PARENTS</span>
+          <h2 class="serif-title light">Kepercayaan Orang Tua Murid</h2>
+        </div>
+
+        <div class="testi-grid">
+          <article class="testi-card">
+            <p>“Alhamdulillah, apa yang kami cari dari sebuah Sekolah Dasar untuk anak kami Ghafi, kami temukan di Mafatih Islamic School Kalibata.”</p>
+            <strong>Orang Tua Ghafi Benzema</strong>
+          </article>
+          <article class="testi-card">
+            <p>“Selama hampir 7 tahun berinteraksi dengan Mafatih dan tahun ini anak ke-3 kami insyaAllah masuk kelas 1, alhamdulillah kami sangat bersyukur.”</p>
+            <strong>Orang Tua Fatih, Faza &amp; Faiz</strong>
+          </article>
+          <article class="testi-card">
+            <p>“Mafatih Islamic School adalah sekolah yang bisa membentuk karakter anak dengan berakhlakul karimah, mandiri, kreatif, dan menjadi generasi Qur'ani.”</p>
+            <strong>Orang Tua Haneefa &amp; Hilya</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="misj-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <div class="misj-brand light">
+          <svg class="misj-emblem" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <path d="M22 3L38 9.5V21C38 30.6 31.1 38.2 22 40.5C12.9 38.2 6 30.6 6 21V9.5L22 3Z" fill="#6D28D9" stroke="#F59E0B" stroke-width="2" />
+            <path d="M22 10L24.2 15.2L29.8 15.6L25.5 19.2L26.8 24.7L22 21.8L17.2 24.7L18.5 19.2L14.2 15.6L19.8 15.2L22 10Z" fill="#FBBF24" />
+            <path d="M14 28.5C17 27.3 19.5 27.7 22 29.2C24.5 27.7 27 27.3 30 28.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <div class="brand-text">
+            <strong>MAFATIH</strong>
+            <span>ISLAMIC SCHOOL · JAKARTA</span>
+          </div>
+        </div>
+        <p class="footer-about">
+          School of Tahfizh, Science and Leadership — Membentuk pemimpin masa depan dengan nilai-nilai Islami.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sekolah</h4>
+        <ul>
+          <li><a href="#about">Profil &amp; Akreditasi A</a></li>
+          <li><a href="#programs">Elementary &amp; Secondary</a></li>
+          <li><a href="#parents">Parents Handbook</a></li>
+          <li><a href="#news">Berita &amp; Karya Siswa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Media Sosial</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/mafatihislamicschool/" target="_blank" rel="noopener noreferrer">Instagram @mafatihislamicschool</a></li>
+          <li><a href="https://www.youtube.com/channel/UC7V78YkiaCRUO4ugJRPNH3A" target="_blank" rel="noopener noreferrer">YouTube Mafatih</a></li>
+          <li><a href="https://www.facebook.com/mafatihkalibata/" target="_blank" rel="noopener noreferrer">Facebook Mafatih Kalibata</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Alamat &amp; Kontak</h4>
+        <ul>
+          <li>Jl. Kalibata Tengah No. 3A, Pancoran, Jakarta Selatan 12740</li>
+          <li><a href="https://wa.me/6285117762664" target="_blank" rel="noopener noreferrer">+62 851-1776-2664 (WhatsApp Resmi)</a></li>
+          <li><a href="https://maps.google.com/?q=Jl.+Kalibata+Tengah+No.3A+Jakarta+Selatan" target="_blank" rel="noopener noreferrer">Buka Lokasi di Google Maps ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Mafatih Islamic School Redesign Concept.</span>
+      <span>International Standard Redesign by <a href="https://dev.hikami.my.id" target="_blank" rel="noopener noreferrer" class="hikami-credit">HIKAMI-DEV | ひかみ</a></span>
+    </div>
+  </footer>
+
+  <!-- MODAL PPDB / DETAIL -->
+  <div class="modal-backdrop" id="misjModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Tutup">×</button>
+      <span class="kicker" id="modalKicker">PPDB 2027/2028</span>
+      <h3 id="modalTitle">Informasi Pendaftaran</h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
